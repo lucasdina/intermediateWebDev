@@ -18,17 +18,31 @@
             var miles = parseFloat($("miles").value);
             var gallons = parseFloat($("gallons").value);
 
-            if (isNaN(miles) || isNaN(gallons)) {
-                alert("Both entries must be numeric");
-            } else if (miles <= 0 || gallons <= 0) {
-            	alert("Both entries must be greater than zero");
+            if (verify("miles") && verify("gallons")) {
+                $("mpg").value = calculateMpg(miles, gallons);
+            } else {
+            	alert("Error!");
+            }
+        };
+        var verify = function(id) {
+            var temp = parseFloat($(id).value);
+            if (isNaN(temp)){
+                $(id).style.borderColor = "red";
+                $(id).focus();
+                return false;
             }
             else {
-                $("mpg").value = calculateMpg(miles, gallons);
+                $(id).style.borderColor = "green";
+                return true;
             }
+        };
+        var clear = function() {
+            $("miles").value = "";
+            $("gallons").value = "";
         };
 		window.onload = function() {
             $("calculate").onclick = processEntries;
+            $("clear").onclick = clear;
             $("miles").focus();
         };
     </script>
@@ -44,6 +58,7 @@
         <input type="text" id="mpg" disabled><br>
         <label>&nbsp;</label>
         <input type="button" id="calculate" value="Calculate MPG"><br>
+        <input type="button" id="clear" value="Clear"><br>
     </main>
 </body>
 </html>
