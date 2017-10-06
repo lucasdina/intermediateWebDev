@@ -1,40 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">	
+    <meta charset="UTF-8">
     <title>Average Test Scores</title>
     <script>
-        var entry;
-        var average;
-        var scores = [];
-        var total = 0;
-        var show = "The test scores:\n";
+        var entry, average, entries = 0,
+            total = 0,
+            show = "The test scores:\n",
+            highestScore = 0;
 
         //first use a do-while loop to get scores from user
         do {
             entry = prompt("Enter test score\n" +
-                           "Or enter 999 to end entries", 999);
+                "Or enter 999 to end entries", 999);
             entry = parseInt(entry);
             if (entry >= 0 && entry <= 100) {
-                scores[scores.length] = entry;
-            } else if (entry != 999){
+                entries = entries + 1;
+                total = total + entry; //both are numbers so adds
+                show = show + entry + "\n"; //strings & numbers so concatenates
+                if (entry > highestScore) {
+                    highestScore = entry;
+                }
+            } else if (entry != 999) {
                 alert("Entry must by a valid number from 0 through 100\n" +
-                      "Or enter 999 to end entries");
+                    "Or enter 999 to end entries");
             }
-        }
-        while (entry != 999); 
 
-        //next use a for loop to process the scores
-        for (var i = 0; i < scores.length; i++) {
-            total = total + scores[i];       //both are numbers so adds
-            show = show + scores[i] + "\n";  //strings & numbers so concatenates
         }
+        while (entry != 999);
 
         //then calculate the average and display
-        average = parseInt(total/scores.length);
-        alert(show + "\nAverage score is " + average);
+        average = parseInt(total / entries);
+        alert(show + "\nAverage Score is: " + average + "\nHighest Score is: " + highestScore + "\nNumeber of Entries: " + entries + "\nTotal Points: " + total);
     </script>
 </head>
+
 <body>
     <main>
         <!-- Will show after JavaScript has run -->
