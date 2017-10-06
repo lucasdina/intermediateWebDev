@@ -8,26 +8,26 @@ var joinList = function() {
     var emailAddress1 = $("email_address1").value;
     var emailAddress2 = $("email_address2").value;
     var firstName = $("first_name").value;
-    var errorMessage = "";
+    var errorMessage = null;
 
     // validate the entries
-    if (emailAddress1 == "") {
+    if (emailAddress1 == null) {
     	errorMessage = "First email address entry required";
         $("email_address1").focus();
-    } else if (emailAddress2 == "") {
+    } else if (emailAddress2 == null) {
     	errorMessage = "Second email address entry required";
     	$("email_address2").focus();
     } else if (emailAddress2 != emailAddress1) {
     	errorMessage = "Email address entries must match";
     	$("email_address2").focus();
-    } else if (firstName == "") {
+    } else if (firstName == null) {
     	errorMessage = "First name entry required";
     	$("first_name").focus();
     }
-
     // submit the form if all entries are valid
     // otherwise, display an error message
-    if (errorMessage = "") {
+    
+    if (errorMessage == null) {
         $("email_form").submit(); 
     } else {
     	alert(errorMessage);
@@ -35,6 +35,6 @@ var joinList = function() {
 };
 
 window.onload = function() {
-    $("join_List").onclick = joinList;
+    $("join_list").onclick = joinList;
     $("email_address1").focus();
 };
