@@ -11,6 +11,7 @@ var processEntries = function() {
     var country = $("country").value;
     var contact = "Text";
     if ($("email").checked) { contact = "Email"; }
+    if ($("mobilePhone").checked) { contact = "Mobile Phone"; }
     if ($("none").checked) { contact = "None"; }
     var terms = $("terms").checked;
 
@@ -50,6 +51,7 @@ var resetForm = function() {
     $("registration_header").firstChild.nodeValue = "";
     $("registration_info").innerHTML = "";
     $("email_address").focus();
+    $("specialTextArea").innerHTML = "These souls are being tried by the current times.";
 };
 
 window.onload = function() {
