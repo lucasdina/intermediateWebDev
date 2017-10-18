@@ -1,6 +1,7 @@
- <html> 
+<html>
+
 <head>
-    <title>Throwing 1 die</title>
+    <title>Throwing 2 dice</title>
     <script>
         //Settings Constants
         var cwidth = 400;
@@ -13,13 +14,20 @@
         var ctx;
 
         function init() {
-            //Gen up a random number
-            var ch = 1 + Math.floor(Math.random() * 6);
-            drawface(ch);
+            //Sends a random number and an element id to drawface(int, string)
+            drawface(giveMeANumber(), 'canvas');
+            drawface(giveMeANumber(), 'canvas2');
         }
 
-        function drawface(n) {
-            ctx = document.getElementById('canvas').getContext('2d');
+        //Created a secondary method to generate a random number
+        //so that we dont get the same 2 numbers each time.
+        function giveMeANumber() {
+            return 1 + Math.floor(Math.random() * 6);
+        }
+
+        //Added constructor id so that we can edit 2 canvases
+        function drawface(n, id) {
+            ctx = document.getElementById(id).getContext('2d');
             ctx.lineWidth = 5;
             ctx.clearRect(dicex, dicey, dicewidth, diceheight);
             ctx.strokeRect(dicex, dicey, dicewidth, diceheight)
@@ -50,7 +58,7 @@
                     break;
             }
         }
-        
+
         //Draws the center dot. Used in 1, 3, and 5 cases.
         function draw1() {
             var dotx;
@@ -77,8 +85,8 @@
             ctx.closePath();
             ctx.fill();
         }
-        
-         //Draws all the corner dots. Used in 4 and 5 cases.
+
+        //Draws all the corner dots. Used in 4 and 5 cases.
         function draw4() {
             var dotx;
             var doty;
@@ -120,11 +128,18 @@
 </head>
 <!-- onLoad kicks off init() in the js which 
 generates a random number and draws the result. -->
+
 <body onLoad="init();">
-<!-- Generates the canvas on which to draw the dice. -->
+    <!-- Generates the canvas on which to draw the dice. -->
     <canvas id="canvas" width="400" height="300">
+    </canvas>
+<!-- Using 2 canvases to avoid having to add more drawing logic. -->
+    <canvas id="canvas2" width="400" height="300">
 <!-- Message to display when HTML5 in the current browser doesn't support <canvas> -->
 Your browser doesn't support the HTML5 element canvas.
 </canvas>
+    <!-- Added a button to re-roll the dice so that you don't have to refresh the page-->
+    <input type="button" value="re-roll" onclick="init();">
 </body>
-</html> 
+
+</html>

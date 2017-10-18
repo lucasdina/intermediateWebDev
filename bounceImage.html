@@ -27,6 +27,17 @@
         var ctx;
         var ballvx = 4;
         var ballvy = 8;
+        var img;
+
+        // loadUp ensures that the canvas wont try to 
+        //display the image before its loaded (or while its null)
+        function loadUp() {
+            img = new Image();
+            img.src = "pearl.jpg";
+            img.onload = function() {
+                init();
+            }
+        }
 
         //Gets the canvas and sends that info to setInterval after attempting to move
         //the ball.
@@ -46,8 +57,9 @@
             ctx.clearRect(boxx, boxy, boxwidth, boxheight);
             moveandcheck();
             ctx.beginPath();
-
-            ctx.arc(ballx, bally, ballrad, 0, Math.PI * 2, true);
+            //Draws an image 30px by 30px
+            //Subtract 15 so that the image is centered
+            ctx.drawImage(img, ballx-15, bally-15, 30, 30);
             ctx.fill();
             ctx.strokeRect(boxx, boxy, boxwidth, boxheight);
         }
@@ -88,9 +100,9 @@
     </script>
 </head>
 
-<!--onLoad gets the ball moving (Ahh, see what I did there?)-->
+<!--loadUp gets the ball moving (Ahh, see what I did there?) and loads the image-->
 
-<body onLoad="init();">
+<body onLoad="loadUp();">
     <canvas id="canvas" width="400" height="300">
 Your browser doesn't support the HTML5 element canvas.
 </canvas>
