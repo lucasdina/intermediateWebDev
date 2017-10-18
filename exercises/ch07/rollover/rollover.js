@@ -12,16 +12,16 @@ window.onload = function() {
 
     // attach mouseover and mouseout events for each image
     image1.onmouseover = function() {
-        
+        image1.src = links[0].href;
     };
     image1.onmouseout = function() {
-        
+        image1.src = links[2].href;
     };
     
     image2.onmouseover = function() {
-        
+        image2.src = links[1].href;
     };
     image2.onmouseout = function() {
-        
+        image2.src = links[3].href;
     };
 };
