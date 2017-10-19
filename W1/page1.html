@@ -12,28 +12,33 @@
 
 <body>
     <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
-        <button type="button" class="navbar-toggler hidden-sm-up pull-xs-right" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <button type="button" class="navbar-toggler-right navbar-toggler pull-xs-right mr-auto" data-toggle="collapse" id="navButton" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="padding: 5px">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-        <a class="navbar-brand" href="index.html">Generic Website</a>
-        <div class="collapse navbar-toggleable-xs" id="navbar">
+        <a class="navbar-brand" href="#">Generic Website</a>
+        <div class="collapse" id="navbar">
             <nav class="nav navbar-nav pull-xs-left">
                 <a class="nav-item nav-link" href="index.html">Home</a>
-                <a class="nav-item nav-link" href="#">Page 1</a>
+                <a class="nav-item nav-link" href="page1.html">Page 1</a>
             </nav>
         </div>
     </nav>
+    
+    <div class="p-1 text-center"><h1>Use this nifty website to see how long you have to study and what grade you must get on your test.</h1></div><br><br><br>
 
-    <div id="pageOne">
-        <input type="text" id="currentGrade"> Current Grade <br></input>
-        <input type="text" id="desiredGrade"> Desired Grade <br></input>
-        <input type="text" id="weight"> Weight of Final <br></input>
-        <input type="button" value="Calculate Minimum Score" onclick="getRequiredScore();"></input>
+    <div class="p-1 text-center" id="pageOne">
+        <input class="p-1 text-center" type="text" id="currentGrade" placeholder="Current Grade"></input><br><br>
+        <input class="p-1 text-center" type="text" id="desiredGrade" placeholder="Desired Grade"></input><br><br>
+        <input class="p-1 text-center" type="text" id="weight" placeholder="Weight of Final"></input><br><br>
+<p class="p-1 text-center">Date of Test:</p>
+        <input type="date" id="dateThing"><br><br>
+        <input class="p-1 text-center" type="button" value="Calculate Minimum Score" onclick="getRequiredScore();"></input><br><br>
         <p id="minimumScore"></p>
     </div>
+
 
 
 </body>
