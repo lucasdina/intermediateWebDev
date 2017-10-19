@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 { 
+    margin-left: 25px
+}
+h2 {
+    font-size: 120%;
+    padding: .25em 0 .25em 50px;
+    cursor: pointer;
+    background: url(../images/plus.png) no-repeat left center;
+}
+h2.minus {
+    background: url(../images/minus.png) no-repeat left center;
+}
+a:focus, a:hover { color: blue; }
+
+div {
+    display: none;
+}
+div.open {
+    display: block;
+}
+p {
+    padding-bottom: .25em;
+    padding-left: 65px;
+}
+ul {
+    padding-left: 100px;
+}
+li {
+    padding-bottom: .25em;
+}
