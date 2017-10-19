@@ -6,6 +6,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/email_list.css">
+    <script src="js/email_list.js"></script>
     <script src="js/main.js"></script>
     <title>This is a Website</title>
 </head>
@@ -29,11 +31,25 @@
             </nav>
         </div>
     </nav>
-    <img class="img-fluid rounded mx-auto d-block" style="margin: 10px;" src="images/generic.jpg">
-    <div class="p-1 text-center" id="mainContent">
-        <h1>This is main content of a website so generic, it'll knock your socks off! Check out my website!</h1>
-    </div>
+    <main class="p-1 text-center">
+        <h1>Please join our news letter</h1>
+        <form id="email_form" name="email_form" action="thanks.html" method="get">
+            <label for="email_address1">Email Address:</label>
+            <input type="text" id="email_address1" name="email_address1">
+            <span>*</span><br>
 
+            <label for="email_address2">Re-enter Email Address:</label>
+            <input type="text" id="email_address2" name="email_address2">
+            <span>*</span><br>
+
+            <label for="first_name">First Name</label>
+            <input type="text" id="first_name" name="first_name">
+            <span>*</span><br>
+
+            <label>&nbsp;</label>
+            <input type="button" id="join_list" value="Join our List">
+        </form>
+    </main>
 
 </body>
 

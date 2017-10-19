@@ -22,11 +22,9 @@ div.open {
 }
 p {
     padding-bottom: .25em;
-    padding-left: 65px;
+    padding: 15px;
 }
 ul {
-    padding-left: 100px;
-}
-li {
-    padding-bottom: .25em;
+    padding-left: 10px;
+    list-style: none;
 }
