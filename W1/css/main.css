@@ -1,3 +1,6 @@
+body{
+    background-color: darkgray;
+}
 .navbar-brand {
     float: none;
 }
