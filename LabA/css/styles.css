@@ -1,0 +1,94 @@
+#mainContent,
+html,
+#searchResults,
+#settingsPage,
+#aboutPage {
+    background-color: dimgray;
+    padding: 10px;
+    
+}
+
+
+
+#currentlyPlaying {
+    padding-top: 20px
+}
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+#currentlyPlayingTitle,
+#currentlyPlayingAlbum,
+#currentlyPlayingArtist {
+    text-align: center;
+    color: #5CB85C;
+}
+
+#aboutPage{
+    padding-bottom: 1000px;
+}
+
+#currentPlaylist,
+#searchResultsList,
+#settingsContent,
+#aboutContent {
+    margin: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: darkgray;
+}
+
+#playlist {
+    margin: auto;
+    width: 30%;
+    list-style: none;
+    align-content: center
+}
+
+.post-container {
+    margin: 20px;
+    overflow: auto
+}
+
+.post-thumb {
+    float: left;
+}
+
+.post-thumb img {
+    display: block;
+    max-height: 100px;
+    max-width: 100px;
+}
+
+.post-content {
+    margin-left: 210px
+}
+
+.post-title {
+    font-weight: bold;
+    font-size: 200%
+}
+
+.add-icon {
+    float: right;
+    width: 30px;
+    height: 30px;
+    align-content: flex-end;
+}
+
+#playlistItem,
+#searchResultListItem {
+    align-content: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#playlistItem:hover,
+#searchResultListItem:hover {
+    background-color: #5CB85C;
+}
