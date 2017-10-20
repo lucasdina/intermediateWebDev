@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <title>FAQs</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="faqs.js"></script>
+</head>
+
+<body>
+    <main id="faqs">
+        <h1>JavaScript FAQs</h1>
+        <h2><a href="#">Books for web developers</a></h2>
+        <div>
+            <ul>
+                <li onclick="changeImage('/images/angular2Cookbook.jpg')">Angular 2 Cookbook</li>
+                <li onclick="changeImage('/images/jasmineCookbook.jpg')">Jasmine Cookbook</li>
+                <li onclick="changeImage('/images/leaningJs.jpg')">Learning JavaScript</li>
+            </ul>
+        </div>
+        <h2><a href="#">Books for Java developers</a></h2>
+        <div>
+            <ul>
+                <li onclick="changeImage('/images/leaningJava.jpg')">Learning Java</li>
+                <li onclick="changeImage('/images/javaBeginnersGuide.jpg')">Java: A Beginner’s Guide, 7th Edition</li>
+                <li onclick="changeImage('/images/javaCompleteReference.jpg')">Java The Complete Reference, 8th Edition</li>
+            </ul>
+        </div>
+        <h2><a href="#">Books for .NET developers</a></h2>
+        <div>
+            <ul>
+                <li onclick="changeImage('/images/cSharp.jpg')">Programming C#: Building .NET Applications with C#</li>
+                <li onclick="changeImage('/images/VB.NET.jpg')">Programming .NET Windows Applications</li>
+                <li onclick="changeImage('/images/xamarin.jpg')">Xamarin 4.x Cross-Platform Application Development: Edition 3</li>
+            </ul>
+        </div>
+        <h2><a href="#">Books for database developers</a></h2>
+        <div>
+            <ul>
+                <li onclick="changeImage('/images/mongo.jpg')">MongoDB: The Definitive Guide</li>
+                <li onclick="changeImage('/images/sql.jpg')">SQL Tricks</li>
+                <li onclick="changeImage('/images/nosql.jpg')">Getting Started with Nosql</li>
+            </ul>
+
+
+        </div>
+        <img id="onlyImage" height="200px" style="float: right; margin-top: -205px">
+    </main>
+
+
+    <center><img id="bigImage" height="600px" src="images/angular2Cookbook.jpg" style="display: none; margin-top: 20px"></center>
+</body>
+</html>
