@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+h1 { 
+    margin-left: 25px
+}
+h2 {
+    font-size: 120%;
+    padding: 10px;
+    cursor: pointer;
+}
+h2.minus {
+}
+a:focus, a:hover { color: blue; }
+
+div {
+    display: none;
+}
+div.open {
+    display: block;
+}
+p {
+    padding-bottom: .25em;
+    padding: 15px;
+}
+ul {
+    padding-left: 10px;
+    list-style: none;
+}

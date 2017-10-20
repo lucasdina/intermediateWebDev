@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <script src="js/slideshow.js"></script>
+    <script src="js/main.js"></script>
+    <title>This is a Website</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark navbar-fixed-top bg-inverse">
+        <button type="button" class="navbar-toggler-right navbar-toggler pull-xs-right mr-auto" data-toggle="collapse" id="navButton" data-target="#navbar" aria-expanded="false" aria-controls="navbar" style="padding: 5px">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="#">Generic Website</a>
+        <div class="collapse" id="navbar">
+            <nav class="nav navbar-nav pull-xs-left">
+                <a class="nav-item nav-link" href="index.html">Home</a>
+                <a class="nav-item nav-link" href="page1.html">Grade Calculator</a>
+                <a class="nav-item nav-link" href="faq.html">FAQ</a>
+                <a class="nav-item nav-link" href="contact.html">Contact</a>
+                <a class="nav-item nav-link" href="news.html">News Letter</a>
+                <a class="nav-item nav-link" href="gallery.html">Gallery</a>
+            </nav>
+        </div>
+    </nav>
+    <main>
+        <h1>Heres a little bit of our work:</h1>
+        <ul id="image_list">
+            <li><a href="images/Energy-Drink.jpg" title="Generic Energy Drink"></a></li>
+            <li><a href="images/genericdrug.jpg" title="Generic Medicine"></a></li>
+            <li><a href="images/Java%20Generics%20Tutorial.jpg" title="Generics in Java"></a></li>
+            <li><a href="images/600-03697886w.jpg" title="Generic Food"></a></li>
+        </ul>
+
+        <p>
+            <input type="button" id="start" value="Start">
+            <input type="button" id="pause" value="Pause" disabled="true">
+        </p>
+        <p><img src="images/Energy-Drink.jpg" alt="Catch and Release" id="image"></p>
+        <h2 id="caption">Generic Energy Drink</h2>
+    </main>
+
+</body>
+
+</html>
