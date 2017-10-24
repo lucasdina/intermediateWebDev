@@ -1,8 +1,14 @@
 * {
+    max-width: 2000px;
+    max-height: 10000px;
+    background-color: #cccc99;
     margin: 0;
     padding: 0;
 }
-body {
+#banner {
+    margin-bottom: 20px;
+}
+main {
     font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 87.5%;
     width: 70%;
@@ -10,43 +16,54 @@ body {
     padding: 15px 25px;
 }
 main {
-    
-    border: 3px solid blue;
+    background-color: #660000;
+    border: 3px solid #EEB111;
     padding: 10px;
 }
 h1 { 
+    color: #EEB111;
+    background-color: #660000;
     font-size: 150%;
 }
 h2 {
+    background-color: #660000;
     font-size: 120%;
     padding: .25em 0 .25em 25px;
     cursor: pointer;
     background: url(images/plus.png) no-repeat left center;
 }
 h2.minus {
+    background-color: #660000;
     background: url(images/minus.png) no-repeat left center;
 }
 a {
-    color: black;
+    background-color: #660000;
+    
+    color: #EEB111;
     text-decoration: none; 
 }
-a:focus, a:hover { color: blue; }
+a:focus, a:hover { color: #cccc99; }
 
 div {
+    background-color: #660000;
     display: none;
 }
 div.open {
+    background-color: #660000;
     display: block;
 }
 ul {
+    background-color: #660000;
     padding-left: 45px;
     list-style: none;
 }
 li {
+    background-color: #660000;
     padding-bottom: .25em;
-    color: blue;
+    color: #cccc99;
 }
 p {
+    background-color: #660000;
     padding-bottom: .25em;
     padding-left: 25px;
 }

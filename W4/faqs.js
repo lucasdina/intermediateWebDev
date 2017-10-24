@@ -1,8 +1,19 @@
 "use strict";
 var $ = function (id) {
     return document.getElementById(id);
-};
 
+};
+var getResult = function () {
+    var num1 = 54.95;
+    var num2 = .1;
+    var result = parseFloat(prompt("What is " + num1 + " * " + num2 + "?"));
+    if (result != (num1 * num2)) {
+        alert("Incorrect");
+    } else {
+        alert("Correct!");
+    }
+};
+getResult;
 // the event handler for the click event of each a element
 var toggle = function () {
     var link = this; // the clicked a tag
@@ -21,14 +32,16 @@ var toggle = function () {
     // toggle div visibility by adding or removing a class
     if (div.classList.contains("open")) {
         //        div.removeAttribute("class");
-        $('onlyImage').style.display = 'none';
+        $('onlyImage').visibility = 'hidden';
         div.classList.remove('open');
     } else {
         //        div.setAttribute("class", "open"); 
         div.classList.add('open');
-        $('onlyImage').style.display = 'block';
+        $('onlyImage').style.display = 'hidden';
         $('onlyImage').src = "";
     }
+
+        $('onlyImage').src = "";
 };
 
 function changeImage(imagePath) {
@@ -42,7 +55,7 @@ function changeImage(imagePath) {
 
 function imageClick(mouseIn) {
     $('bigImage').src = $('onlyImage').src;
-    $('bigImage').style.display = (mouseIn)? 'block' : 'none';
+    $('bigImage').style.display = (mouseIn) ? 'block' : 'none';
 }
 
 window.onload = function () {
@@ -54,11 +67,11 @@ window.onload = function () {
     for (var i = 0; i < linkElements.length; i++) {
         linkElements[i].onclick = toggle;
     }
-    
-    $('onlyImage').addEventListener("mouseenter", function() {
+
+    $('onlyImage').addEventListener("mouseenter", function () {
         imageClick(true)
     });
-    $('onlyImage').addEventListener("mouseleave", function() {
+    $('onlyImage').addEventListener("mouseleave", function () {
         imageClick(false)
     });
     // set focus on first <a> tag
